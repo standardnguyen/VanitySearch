@@ -1764,7 +1764,10 @@ void VanitySearch::Search(int nbThread,std::vector<int> gpuId,std::vector<int> g
     t0 = t1;
 
   }
-
+  char *ctimeBuff;
+  time_t now = time(NULL);
+  ctimeBuff = ctime(&now);
+  printf("End %s", ctimeBuff);
   free(params);
 
 }
